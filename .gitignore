@@ -1,3 +1,26 @@
-.vagrant
-rails
-open_camp
+# .gitignore
+#
+# the pound sign, '#', is a comment.
+#
+# What is a gitignore file?
+#
+# A .gitignore file tells git what to NOT verson control. Thus, whatever files
+# or folders are listed here will not be added to your git repository when you 
+# use the git add command. For example, if you run this in your terminal, 
+# 
+#   git add open_camp
+#
+# will not be added to this git respository.
+#
+
+
+# ignore all files
+*
+
+
+# do not ignore these files/folders, IE they should be in git.
+#
+!README.md
+!Vagrantfile
+!puppet/*
+!.gitignore
