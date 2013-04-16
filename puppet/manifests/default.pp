@@ -144,3 +144,10 @@ exec { "${as_vagrant} 'gem install rails --no-rdoc --no-ri'":
   creates => "${home}/.rvm/bin/rails",
   require => Exec['install_ruby']
 }
+
+file {
+  "/home/vagrant/.bash_profile":
+  source => "/vagrant/puppet/files/bash_profile",
+  owner => "vagrant", group => "vagrant", mode => 0664;
+}
+
