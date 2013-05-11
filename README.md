@@ -1,113 +1,131 @@
-# A Virtual Machine for Ruby on Rails Development
+# A Virtual Machine for Getting Started with Ruby on Rails
+
+__We want to make it easy for you to create Ruby on Rails applications.__
+
+One hurdle we have seen for Rails newcomers is installing and configuring Ruby on Rails on their computers.  This tool sets up of a Ruby on Rails development environment.  Follow the steps below. If you have questions, please feel free to [create an issue (really!)](http://github.com/railsmn/railsmn-dev-box/issues).
 
 
+## Getting started
 
-## Introduction
-
-__We want to make it easy for you to create Ruby on Rails web apps.__
-
-One hurdle we have seen for Rails newcomers is installing and configuring Ruby on Rails on their computers. So we forked/copied the Rails Core Virtual Machine (VM). This project automates the setup of a development environment for Ruby on Rails development. This is the easiest way to build a Virtual Machine (VM) with everything ready to start hacking Ruby on Rails, all in an isolated virtual machine.
-
-
-
-## Requirements
-
-You'll need to have these packages installed on your machine.
+### Step 1 - Install stuff  
+Install these packages (programs).  
 
 * [Git](http://git-scm.com/) - [downloads page](http://git-scm.com/downloads)
-
 * [VirtualBox](https://www.virtualbox.org) - [downloads page](https://www.virtualbox.org/wiki/Downloads)
-
 * [Vagrant](http://vagrantup.com) - [downloads page](http://downloads.vagrantup.com/)
 
 
+### Step 2 - Build Vagrant Virtual Machine   
+In the terminal application,  
 
-## How To Build The Virtual Machine
+    git clone git://github.com/railsmn/railsmn-dev-box.git
+    cd railsmn-dev-box
+    vagrant up
 
-Building the virtual machine is this easy:
+TODO - what about in Windows?
 
-    host $ git clone git://github.com/railsmn/railsmn-dev-box.git
-    host $ cd railsmn-dev-box
-    host $ vagrant up
+The aboove commands,   
+- download the base Linux image  
+- start the Vagrant Virtual Machine  
+- take about 3 minutes  
 
-That's it.
 
-If the base box is not present that command fetches it first. The setup itself takes about 3 minutes in my MacBook Air. After the installation has finished, you can access the virtual machine with
+### Step 3 - SSH into Virtual Machine
+In the terminal application,  
 
-    host $ vagrant ssh
-    Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
-    ...
+    vagrant ssh    # NOTE: now you have SSH-ed into the Vagrant Virtual Machine (VM)
+
     vagrant@rails-dev-box:~$
 
-Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer.
+### Step 4 - Create a Rails app  
+Using the same SSH connection from Step 3,  
+    
+    rails new custom_app -d postgresql  
 
+
+
+### Step 4 - Edit the ````database.yml```` file
+Use your text editor and open the   ````custom_app/config/databse.yml````  file.  
+
+Change  ````username````  from  ````custom_app````  to  ````vagrant````.  
+  
+Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
+
+
+### Step 5 - Start the Rails serer
+Using the same SSH connection from Step 4,   
+    
+    rails server
+
+Open your browser and go to [localhost:3000](http://localhost:3000).  
 
 
 ## What's In The Box
 
 * Git
-
 * RVM
-
-* Ruby 1.9.3 (binary RVM install)
-
+* Ruby 2.0.0 (binary RVM install)
 * Bundler
-
 * SQLite3, MySQL, and Postgres
-
 * System dependencies for nokogiri, sqlite3, mysql, mysql2, and pg
-
 * Databases and users needed to run the Active Record test suite
-
 * Node.js for the asset pipeline
-
 * Memcached
-
-
-
-## Host/VirtualMachine Folders
-
-Vagrant mounts that very directory as _/vagrant_ within the virtual machine:
-
-    vagrant@rails-dev-box:~$ ls /vagrant
-    puppet  rails  README.md  Vagrantfile
-
-so we are ready to go to edit in the host, and test in the virtual machine.
-
-This workflow is convenient because in the host computer you normally have your editor of choice fine-tuned, Git configured, and SSH keys in place.
 
 
 
 ## Virtual Machine Management
 
-When done just log out with `^D` and suspend the virtual machine
+To __exit__ SSH connection to Vagrant Virtual Machine, 
 
-    host $ vagrant suspend
+    exit        # option 1
 
-then, resume to hack again
+    # press ^D  # option 2
 
-    host $ vagrant resume
 
-Run
+To __suspend__ virtual machine,  
+    
+    # from your computer
 
-    host $ vagrant halt
+    vagrant suspend
 
-to shutdown the virtual machine, and
 
-    host $ vagrant up
+To __resume__ virtual machine,  
+    
+    # from your computer
 
-to boot it again.
+    vagrant resume
 
-You can find out the state of a virtual machine anytime by invoking
 
-    host $ vagrant status
+To __shutdown/halt__ virtual machine,  
+    
+    # from your computer 
 
-Finally, to completely wipe the virtual machine from the disk **destroying all its contents**:
+    vagrant halt
 
-    host $ vagrant destroy # DANGER: all is gone
+
+To __resume__ virtual machine,  
+
+   # from your computer  
+
+   vagrant up
+
+
+To get __status__ of virtual machine,  
+
+    # from your computer
+
+    vagrant status
+
+
+To completely delete virtual machine,  
+
+    # from your computer
+
+    vagrant destroy   # DANGER: all is gone
+
 
 Please check the [Vagrant documentation](http://vagrantup.com/v1/docs/index.html) for more information on Vagrant.
-
 
 
 ## Credits 
