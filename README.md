@@ -40,22 +40,28 @@ In the terminal application,
 ### Step 4 - Create a Rails app  
 Using the same SSH connection from Step 3,  
     
-    rails new custom_app -d postgresql  
+    rails new opencamp -d postgresql  
 
 
 
 ### Step 4 - Edit the ````database.yml```` file
 Use your text editor and open the   ````custom_app/config/databse.yml````  file.  
 
-Change  ````username````  from  ````custom_app````  to  ````vagrant````.  
+Change  ````username````  from  ````opencamp````  to  ````vagrant````.  
   
 Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
 
 
-### Step 5 - Start the Rails serer
+### Step 5 - Start the Rails server
 Using the same SSH connection from Step 4,   
-    
-    rails server
+
+```
+rake db:create
+```
+
+```
+rails server
+```
 
 Open your browser and go to [localhost:3000](http://localhost:3000).  
 
