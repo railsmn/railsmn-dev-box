@@ -40,14 +40,14 @@ In the terminal application,
 ### Step 4 - Create a Rails app  
 Using the same SSH connection from Step 3,  
     
-    rails new opencamp -d postgresql  
+    rails new open_camp -d postgresql  
 
 
 
 ### Step 4 - Edit the ````database.yml```` file
 Use your text editor and open the   ````custom_app/config/databse.yml````  file.  
 
-Change  ````username````  from  ````opencamp````  to  ````vagrant````.  
+Change  ````username````  from  ````open_camp````  to  ````vagrant````.  
   
 Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
 
