@@ -10,9 +10,15 @@ One hurdle we have seen for Rails newcomers is installing and configuring Ruby o
 ### Step 1 - Install stuff  
 Install 3 packages (programs).  
 
-* [Git](http://git-scm.com/) - [downloads page](http://git-scm.com/downloads)
-* [VirtualBox](https://www.virtualbox.org) - [downloads page](https://www.virtualbox.org/wiki/Downloads)
-* [Vagrant](http://vagrantup.com) - [downloads page](http://downloads.vagrantup.com/)
+* [Git](http://git-scm.com/) - [downloads page](http://git-scm.com/downloads)  
+  + choose Operating System specific package  
+
+* [VirtualBox](https://www.virtualbox.org) - [downloads page](https://www.virtualbox.org/wiki/Downloads)  
+  + click on system specific link under "VirtualBox platform packages"  
+
+* [Vagrant](http://vagrantup.com) - [downloads page](http://downloads.vagrantup.com/)  
+  + click on latest edition  
+  + choose Operating specific package  
 
 
 ### Step 2 - Build Vagrant Virtual Machine   
