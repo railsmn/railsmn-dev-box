@@ -8,7 +8,7 @@ One hurdle we have seen for Rails newcomers is installing and configuring Ruby o
 ## Getting started
 
 ### Step 1 - Install stuff  
-Install these packages (programs).  
+Install 3 packages (programs).  
 
 * [Git](http://git-scm.com/) - [downloads page](http://git-scm.com/downloads)
 * [VirtualBox](https://www.virtualbox.org) - [downloads page](https://www.virtualbox.org/wiki/Downloads)
