@@ -45,11 +45,11 @@ If you would like to have access to the open_camp project files *outside* of you
 7.	Run the ```vagrant up``` command.
 * 	More information about this process is available on the [Vagrant project's website](http://docs-v1.vagrantup.com/v1/docs/config/vm/share_folder.html)
 
-The aboove commands,   
-- download the base Linux image  
-- start the Vagrant Virtual Machine  
-- take about 3 minutes  
-
+### Step 2 (all users) continued
+The above commands,   
+- Download the base Linux image  
+- Create and start the Vagrant Virtual Machine  
+- Can take anywhere from 3-45 minutes, depending on your machine and internet connection.  
 
 ### Step 3 - SSH into Virtual Machine
 In the terminal application,  
