@@ -37,8 +37,10 @@ If you would like to have access to the open_camp project files *outside* of you
 2.	In your GithubUI application, clone the repository available at git://github.com/railsmn/railsmn-dev-box.git - see http://windows.github.com/help.html for more info on how to do this.	
 3.	Once downloaded, open the 'railsmn-dev-box' folder on your computer, using File Explorer.
 4.	Now, go back to the folder you created in Step 1, and copy the [FULL PATH](http://technet.microsoft.com/en-us/magazine/ff678296.aspx)
-5.	Next, we want to edit the 'Vagrantfile' file. Open it with your favorite text editor, and copy and paste the following inside of the code block: ```config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "**Windows Folder Path**"```
+5.	Next, we want to edit the 'Vagrantfile' file. Open it with your favorite text editor, and edit the line that reads: ```config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "**Windows Folder Path**"```
+
 	Replace the 'Windows Folder Path' text with the FULL PATH that you copied in Step 4.
+
 	**IMPORTANT:** Windows will, by default, paste something like this "C:\Users\Mo\Desktop\open_camp_folder". Make sure that you change out the backwards slashes, and replace them with forward slashes. The end result should look something like this:
 	```config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "C:/Users/Mo/Desktop/open_camp_folder"```
 6. 	In your Git Shell (ie: Start -> Applications -> Github -> Git Shell), CD into the directory from Step 2 (ie: Where the ```Vagrantfile``` exists). 
