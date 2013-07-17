@@ -67,12 +67,35 @@ Using the same SSH connection from Step 3,
 
 
 
-### Step 4 - Edit the ````database.yml```` file
+### Step 4b - Edit the ````database.yml```` file
 Use your text editor and open the   ````custom_app/config/databse.yml````  file.  
 
 Change  ````username````  from  ````open_camp````  to  ````vagrant````.  
   
-Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
+Add this to the end of the `development` and `test` blocks: `template: template0`
+
+It should now look something like this:
+
+```
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: open_camp_development
+  pool: 5
+  username: vagrant
+  password:
+  template: template0
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: open_camp_test
+  pool: 5
+  username: vagrant
+  password:
+  template: template0
+```
+
 
 
 ### Step 5 - Start the Rails server
