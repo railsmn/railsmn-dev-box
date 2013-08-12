@@ -67,15 +67,15 @@ Using the same SSH connection from Step 3,
 
 
 
-### Step 4 - Edit the ````database.yml```` file
-Use your text editor and open the   ````custom_app/config/databse.yml````  file.  
+### Step 5 - Edit the ````database.yml```` file
+Use your text editor and open the   ````open_camp/config/databse.yml````  file.  
 
 Change  ````username````  from  ````open_camp````  to  ````vagrant````.  
   
 Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
 
 
-### Step 5 - Start the Rails server
+### Step 6 - Start the Rails server
 Using the same SSH connection from Step 4,   
 
 ```
