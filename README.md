@@ -68,7 +68,7 @@ Using the same SSH connection from Step 3,
 
 
 ### Step 4 - Edit the ````database.yml```` file
-Use your text editor and open the   ````custom_app/config/databse.yml````  file.  
+Use your text editor and open the   ````open_camp/config/databse.yml````  file.  
 
 Change  ````username````  from  ````open_camp````  to  ````vagrant````.  
   
