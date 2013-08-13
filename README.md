@@ -64,7 +64,7 @@ In the terminal application,
 Using the same SSH connection from Step 3,  
     
     rails new open_camp -d postgresql  
-		cd open_camp
+	cd open_camp
 
 
 
