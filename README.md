@@ -64,6 +64,7 @@ In the terminal application,
 Using the same SSH connection from Step 3,  
     
     rails new open_camp -d postgresql  
+		cd open_camp
 
 
 
@@ -73,6 +74,8 @@ Use your text editor and open the   ````open_camp/config/databse.yml````  file.
 Change  ````username````  from  ````open_camp````  to  ````vagrant````.  
   
 Change  ````encoding````  from  ````unicode````  to  ````SQL_ASCII````.  
+
+Make sure you do this for both the Development and Test databases.  
 
 
 ### Step 6 - Start the Rails server
