@@ -1,4 +1,4 @@
-# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+# Vagrant version 2
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
