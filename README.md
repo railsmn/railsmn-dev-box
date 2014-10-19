@@ -41,6 +41,8 @@ If you would like to have access to the open_camp project files *outside* of you
 
 	Replace the 'Windows Folder Path' text with the FULL PATH that you copied in Step 4.
 
+	**Error?**: If you have error like ```* The following settings shouldn't exist: share_folder```, use this format: ```config.vm.synced_folder "**Windows Folder Path**", "/home/vagrant/open_camp"```
+
 	**IMPORTANT:** Windows will, by default, paste something like this ```"C:\Users\Mo\Desktop\open_camp_folder"``` Make sure that you change out the backwards slashes, and replace them with forward slashes. The end result should look something like this:
 	```config.vm.share_folder "open_camp_directory", "/home/vagrant/open_camp", "C:/Users/Mo/Desktop/open_camp_folder"```
 6. 	In your Git Shell (ie: Start -> Applications -> Github -> Git Shell), CD into the directory from Step 2 (ie: Where the ```Vagrantfile``` exists). 
